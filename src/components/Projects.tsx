@@ -76,7 +76,8 @@ const Projects = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {projects.map((project, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2">
-                  <Card className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg transition-all group overflow-hidden h-full flex flex-col">
+                  <div className="h-full min-h-[600px]">
+                    <Card className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg transition-all group overflow-hidden h-full flex flex-col">
                     <CardHeader className="pb-4">
                       <div className="flex items-start gap-4">
                         <div className={`p-3 rounded-xl ${getGradientClasses(project.gradient)} text-white shadow-lg group-hover:scale-110 transition-transform`}>
@@ -123,9 +124,9 @@ const Projects = () => {
                       </div>
 
                       {/* Technologies */}
-                      <div>
+                      <div className="flex-grow">
                         <h4 className="text-sm font-semibold text-foreground mb-3">Technologies Used</h4>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2 min-h-[60px]">
                           {project.technologies.map((tech, techIndex) => (
                             <Badge key={techIndex} variant="outline" className="text-xs">
                               {tech}
@@ -150,7 +151,8 @@ const Projects = () => {
                         </Button>
                       </div>
                     </CardContent>
-                  </Card>
+                    </Card>
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>

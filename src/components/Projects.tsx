@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ExternalLink, Github, TrendingUp, Zap, Brain, Target } from "lucide-react";
 
 const Projects = () => {
@@ -65,18 +64,9 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="relative">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {projects.map((project, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2">
-                  <Card className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg transition-all group overflow-hidden h-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <Card key={index} className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg transition-all group overflow-hidden h-full flex flex-col">
                     <CardHeader className="pb-4">
                       <div className="flex items-start gap-4">
                         <div className={`p-3 rounded-xl ${getGradientClasses(project.gradient)} text-white shadow-lg group-hover:scale-110 transition-transform`}>
@@ -95,7 +85,7 @@ const Projects = () => {
                       </div>
                     </CardHeader>
 
-                    <CardContent className="space-y-6">
+                    <CardContent className="space-y-6 flex-grow flex flex-col">
                       <p className="text-muted-foreground leading-relaxed">
                         {project.description}
                       </p>
@@ -135,7 +125,7 @@ const Projects = () => {
                       </div>
 
                       {/* Action Buttons */}
-                      <div className="flex gap-3 pt-4">
+                      <div className="flex gap-3 pt-4 mt-auto">
                         <Button variant="default" size="sm" asChild className="flex-1">
                           <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-4 h-4" />
@@ -151,12 +141,7 @@ const Projects = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
+          ))}
         </div>
 
         {/* Call to Action */}

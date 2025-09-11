@@ -37,11 +37,11 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="mb-8 flex justify-center">
             <div className="relative">
-              <div className="w-44 h-44 rounded-full border-4 border-white/20 shadow-xl overflow-hidden bg-gray-100 flex items-center justify-center">
+              <div className="w-44 h-44 rounded-full border-4 border-white/20 shadow-xl overflow-hidden">
                 <img
                   src={profileImage}
                   alt="Snehashish Reddy Manda"
-                  className="w-full h-full object-contain scale-90"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400/20 to-transparent"></div>

@@ -23,8 +23,7 @@ const Projects = () => {
       technologies: ["Python", "TensorFlow", "Keras", "scikit-learn", "UMAP", "OpenCV", "Pandas", "NumPy", "Jupyter"],
       category: "Machine Learning",
       gradient: "from-purple-500 to-pink-500",
-      demoUrl: "#",
-      githubUrl: "#"
+      githubUrl: "https://www.kaggle.com/code/ashishreddy9000/fyp-track-4-darknet-feat-ext-umap-svm-rbf"
     },
     {
       title: "MatchWise - Resource Optimization",
@@ -43,8 +42,7 @@ const Projects = () => {
       technologies: ["Python", "FastAPI", "PuLP", "OR-Tools", "Flutter", "Dart", "Firebase", "GitHub Actions"],
       category: "Optimization",
       gradient: "from-blue-500 to-cyan-500",
-      demoUrl: "#",
-      githubUrl: "#"
+      githubUrl: "https://github.com/orgs/yashas-hm-unc/teams/523/repositories"
     }
   ];
 
@@ -137,13 +135,7 @@ const Projects = () => {
 
                       {/* Action Buttons */}
                       <div className="flex gap-3 pt-4 mt-auto">
-                        <Button variant="default" size="sm" asChild className="flex-1">
-                          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="w-4 h-4" />
-                            View Demo
-                          </a>
-                        </Button>
-                        <Button variant="outline" size="sm" asChild className="flex-1">
+                        <Button variant="outline" size="sm" asChild className="w-full">
                           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                             <Github className="w-4 h-4" />
                             Source Code

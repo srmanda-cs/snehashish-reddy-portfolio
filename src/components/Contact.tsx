@@ -57,8 +57,8 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Contact Information */}
           <Card className="card-gradient border-primary/20 shadow-elevated">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6 text-gradient">Get In Touch</h3>
+            <CardContent className="p-4 md:p-8">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-gradient text-center lg:text-left">Get In Touch</h3>
               
               <div className="space-y-6">
                 {contactInfo.map((contact, index) => (
@@ -116,8 +116,8 @@ const Contact = () => {
 
           {/* Availability & Status */}
           <Card className="card-gradient border-primary/20 shadow-elevated">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-6 text-gradient">Current Status</h3>
+            <CardContent className="p-4 md:p-8">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-gradient text-center lg:text-left">Current Status</h3>
               
               <div className="space-y-6">
                 <div className="p-4 bg-primary/10 border border-primary/20 rounded-lg">

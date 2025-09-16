@@ -166,19 +166,21 @@ const Projects = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <Card className="card-gradient border-primary/20 shadow-elevated max-w-2xl mx-auto">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4">
+            <CardContent className="p-6 md:p-8">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">
                 Interested in <span className="text-gradient">Collaboration?</span>
               </h3>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-6 text-center">
                 I'm always excited to work on challenging problems and innovative solutions. 
                 Let's discuss how we can build something amazing together.
               </p>
-              <Button variant="gradient" size="lg" asChild>
-                <a href="mailto:srmanda.cs@gmail.com">
-                  Get In Touch
-                </a>
-              </Button>
+              <div className="flex justify-center">
+                <Button variant="gradient" size="lg" asChild>
+                  <a href="mailto:srmanda.cs@gmail.com">
+                    Get In Touch
+                  </a>
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>

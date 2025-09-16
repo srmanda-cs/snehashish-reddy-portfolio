@@ -73,7 +73,7 @@ const Projects = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {projects.map((project, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2">
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2">
                   <div className="h-full min-h-[600px]">
                     <Card className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg transition-all group overflow-hidden h-full flex flex-col">
                     <CardHeader className="pb-4">
@@ -87,15 +87,15 @@ const Projects = () => {
                               {project.category}
                             </Badge>
                           </div>
-                          <h3 className="text-2xl font-bold text-foreground group-hover:text-gradient transition-colors">
+                          <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-gradient transition-colors">
                             {project.title}
                           </h3>
                         </div>
                       </div>
                     </CardHeader>
 
-                    <CardContent className="space-y-6 flex-grow flex flex-col">
-                      <p className="text-muted-foreground leading-relaxed">
+                    <CardContent className="space-y-4 md:space-y-6 flex-grow flex flex-col px-4 md:px-6">
+                      <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                         {project.description}
                       </p>
 
@@ -148,9 +148,19 @@ const Projects = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            <CarouselPrevious className="left-2 md:left-4" />
+            <CarouselNext className="right-2 md:right-4" />
           </Carousel>
+          
+          {/* Mobile Navigation Dots */}
+          <div className="flex justify-center gap-2 mt-6 md:hidden">
+            {projects.map((_, index) => (
+              <div
+                key={index}
+                className="w-2 h-2 rounded-full bg-muted-foreground/30"
+              />
+            ))}
+          </div>
         </div>
 
         {/* Call to Action */}

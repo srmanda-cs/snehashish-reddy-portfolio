@@ -130,9 +130,19 @@ const KeyAchievements = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
+            <CarouselPrevious className="left-2 md:left-4" />
+            <CarouselNext className="right-2 md:right-4" />
           </Carousel>
+          
+          {/* Mobile Navigation Dots */}
+          <div className="flex justify-center gap-2 mt-6 md:hidden">
+            {achievements.map((_, index) => (
+              <div
+                key={index}
+                className="w-2 h-2 rounded-full bg-muted-foreground/30"
+              />
+            ))}
+          </div>
         </div>
 
         {/* Summary Stats */}

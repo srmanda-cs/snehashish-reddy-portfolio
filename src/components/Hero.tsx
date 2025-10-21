@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Mail, Phone, MapPin } from "lucide-react";
 import profileImage from "@/assets/profile-avatar.jpg";
 
 const Hero = () => {
@@ -10,9 +10,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center text-white relative overflow-hidden">
-      {/* Background Video */}
-      <div className="absolute inset-0 w-full h-full">
+    <section className="min-h-[600px] md:min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+      {/* Background Video - Desktop Only */}
+      <div className="absolute inset-0 w-full h-full hidden md:block">
         <video
           autoPlay
           loop
@@ -29,15 +29,18 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       </div>
 
-      {/* Enhanced overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+      {/* Mobile Gradient Background */}
+      <div className="absolute inset-0 w-full h-full md:hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
+
+      {/* Enhanced overlay for better text readability - Desktop only uses backdrop-blur */}
+      <div className="absolute inset-0 bg-black/60 md:backdrop-blur-sm"></div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
           {/* Profile Image */}
           <div className="mb-8 flex justify-center">
             <div className="relative">
-              <div className="w-44 h-44 rounded-full border-4 border-white/20 shadow-xl overflow-hidden">
+              <div className="w-32 h-32 md:w-44 md:h-44 rounded-full border-4 border-white/20 shadow-xl overflow-hidden">
                 <img
                   src={profileImage}
                   alt="Snehashish Reddy Manda"
@@ -67,24 +70,28 @@ const Hero = () => {
           </p>
 
           {/* Contact Info */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-gray-300">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-12 text-gray-300">
             <div className="flex items-center gap-2">
-              <span>📧 srmanda.cs@gmail.com</span>
+              <Mail className="w-4 h-4 text-blue-400" />
+              <span className="text-sm md:text-base">srmanda.cs@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
-              <span>📱 (919) 672-2226</span>
+              <Phone className="w-4 h-4 text-blue-400" />
+              <span className="text-sm md:text-base">(919) 672-2226</span>
             </div>
             <div className="flex items-center gap-2">
-              <span>📍 Chapel Hill, NC</span>
+              <MapPin className="w-4 h-4 text-blue-400" />
+              <span className="text-sm md:text-base">Chapel Hill, NC</span>
             </div>
           </div>
 
           {/* CTA Button */}
           <button
             onClick={scrollToAbout}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg min-h-[44px]"
           >
-            Learn More About Me
+            <span className="hidden md:inline">Learn More About Me</span>
+            <span className="md:hidden">Learn More</span>
             <ArrowDown className="animate-bounce" size={20} />
           </button>
         </div>

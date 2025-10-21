@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import {
   ExternalLink,
   Github,
@@ -143,12 +144,18 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative px-0 md:px-16">
           <Carousel
             opts={{
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 5000,
+                stopOnInteraction: true,
+              }),
+            ]}
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
@@ -157,8 +164,8 @@ const Projects = () => {
                   key={index}
                   className="pl-2 md:pl-4 basis-full md:basis-1/2"
                 >
-                  <div className="h-full min-h-[600px]">
-                    <Card className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg transition-all group overflow-hidden h-full flex flex-col">
+                  <div className="h-full min-h-[500px] md:min-h-[600px]">
+                    <Card className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg active:shadow-xl transition-all group overflow-hidden h-full flex flex-col">
                       <CardHeader className="pb-4">
                         <div className="flex items-start gap-4">
                           <div
@@ -237,7 +244,7 @@ const Projects = () => {
                             variant="outline"
                             size="sm"
                             asChild
-                            className="w-full"
+                            className="w-full min-h-[44px] active:scale-95 transition-transform"
                           >
                             <a
                               href={project.githubUrl}
@@ -255,16 +262,17 @@ const Projects = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 md:left-4" />
-            <CarouselNext className="right-2 md:right-4" />
+            <CarouselPrevious className="w-10 h-10 md:w-12 md:h-12" />
+            <CarouselNext className="w-10 h-10 md:w-12 md:h-12" />
           </Carousel>
 
-          {/* Mobile Navigation Dots */}
+          {/* Mobile Navigation Dots - Visual indicator only */}
           <div className="flex justify-center gap-2 mt-6 md:hidden">
             {projects.map((_, index) => (
               <div
                 key={index}
-                className="w-2 h-2 rounded-full bg-muted-foreground/30"
+                className="w-2 h-2 rounded-full bg-primary/50 transition-all"
+                aria-label={`Project ${index + 1}`}
               />
             ))}
           </div>

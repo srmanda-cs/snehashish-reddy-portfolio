@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import {
   TrendingUp,
   DollarSign,
@@ -100,12 +101,18 @@ const KeyAchievements = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative px-0 md:px-16">
           <Carousel
             opts={{
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 5000,
+                stopOnInteraction: true,
+              }),
+            ]}
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
@@ -114,7 +121,7 @@ const KeyAchievements = () => {
                   key={index}
                   className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
                 >
-                  <Card className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg transition-all group overflow-hidden h-full">
+                  <Card className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg active:shadow-xl transition-all group overflow-hidden h-full">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4 mb-4">
                         <div
@@ -165,16 +172,17 @@ const KeyAchievements = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 md:left-4" />
-            <CarouselNext className="right-2 md:right-4" />
+            <CarouselPrevious className="w-10 h-10 md:w-12 md:h-12" />
+            <CarouselNext className="w-10 h-10 md:w-12 md:h-12" />
           </Carousel>
 
-          {/* Mobile Navigation Dots */}
+          {/* Mobile Navigation Dots - Visual indicator only */}
           <div className="flex justify-center gap-2 mt-6 md:hidden">
             {achievements.map((_, index) => (
               <div
                 key={index}
-                className="w-2 h-2 rounded-full bg-muted-foreground/30"
+                className="w-2 h-2 rounded-full bg-primary/50 transition-all"
+                aria-label={`Achievement ${index + 1}`}
               />
             ))}
           </div>

@@ -21,7 +21,7 @@ const Hero = () => {
           className="w-full h-full object-cover"
         >
           <source
-            src="https://videos.pexels.com/video-files/1722882/1722882-uhd_2560_1440_25fps.mp4"
+            src="https://videos.pexels.com/video-files/3125448/3125448-uhd_3840_2160_25fps.mp4"
             type="video/mp4"
           />
         </video>

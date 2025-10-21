@@ -117,9 +117,21 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-24 px-4 bg-gray-900">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+    <section
+      id="experience"
+      className="py-24 px-4 bg-gray-900 relative overflow-hidden"
+    >
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/3 left-1/3 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-glow"></div>
+        <div
+          className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-glow"
+          style={{ animationDelay: "3s" }}
+        ></div>
+      </div>
+
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="text-center mb-16 scroll-animate">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
             Work{" "}
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -136,12 +148,12 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg transition-all"
+              className="card-gradient border-primary/20 shadow-elevated card-hover-lift glow-on-hover scroll-animate"
             >
               <CardHeader className="pb-4">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-2xl font-bold text-background shadow-lg">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-2xl font-bold text-background shadow-lg hover:scale-110 hover:rotate-6 transition-all duration-300">
                       {exp.logo}
                     </div>
                     <div>
@@ -176,11 +188,11 @@ const Experience = () => {
                     {exp.achievements.map((achievement, achIndex) => (
                       <div
                         key={achIndex}
-                        className="flex gap-4 p-4 bg-background/50 rounded-lg border border-primary/10"
+                        className="flex gap-4 p-4 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/30 hover:bg-background/70 transition-all duration-300 group"
                       >
                         <div className="flex-shrink-0 mt-1">
-                          <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
-                            <TrendingUp className="w-4 h-4 text-primary" />
+                          <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 group-hover:scale-110 transition-all duration-300">
+                            <TrendingUp className="w-4 h-4 text-primary group-hover:rotate-12 transition-transform duration-300" />
                           </div>
                         </div>
                         <div className="space-y-2">
@@ -254,7 +266,7 @@ const Experience = () => {
                       <Badge
                         key={techIndex}
                         variant="secondary"
-                        className="text-xs"
+                        className="text-xs hover:bg-primary/20 hover:scale-105 transition-all duration-200 cursor-default"
                       >
                         {tech}
                       </Badge>

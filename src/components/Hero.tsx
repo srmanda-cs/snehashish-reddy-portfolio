@@ -38,49 +38,49 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
           {/* Profile Image */}
-          <div className="mb-8 flex justify-center">
-            <div className="relative">
-              <div className="w-32 h-32 md:w-44 md:h-44 rounded-full border-4 border-white/20 shadow-xl overflow-hidden">
+          <div className="mb-8 flex justify-center scroll-animate">
+            <div className="relative group">
+              <div className="w-32 h-32 md:w-44 md:h-44 rounded-full border-4 border-white/20 shadow-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:scale-105">
                 <img
                   src={profileImage}
                   alt="Snehashish Reddy Manda"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400/20 to-transparent"></div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400/20 to-transparent group-hover:from-blue-400/30 transition-all duration-300"></div>
             </div>
           </div>
 
           {/* Main Content */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight scroll-animate">
             <span className="block text-white">Snehashish</span>
             <span className="block bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Reddy Manda
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-300 mb-4 font-light">
+          <p className="text-xl md:text-2xl text-gray-300 mb-4 font-light scroll-animate">
             Full-Stack Software Engineer
           </p>
 
-          <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed scroll-animate">
             Experienced in building production-grade systems on AWS and applying
             advanced optimization models to solve complex problems. Contributed
             to $1M+ systems using React, Python, and cloud technologies.
           </p>
 
           {/* Contact Info */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-12 text-gray-300">
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-blue-400" />
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-12 text-gray-300 scroll-animate">
+            <div className="flex items-center gap-2 hover:text-primary transition-colors duration-200 group">
+              <Mail className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform duration-200" />
               <span className="text-sm md:text-base">srmanda.cs@gmail.com</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-blue-400" />
+            <div className="flex items-center gap-2 hover:text-primary transition-colors duration-200 group">
+              <Phone className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform duration-200" />
               <span className="text-sm md:text-base">(919) 672-2226</span>
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-blue-400" />
+            <div className="flex items-center gap-2 hover:text-primary transition-colors duration-200 group">
+              <MapPin className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform duration-200" />
               <span className="text-sm md:text-base">Chapel Hill, NC</span>
             </div>
           </div>
@@ -88,7 +88,7 @@ const Hero = () => {
           {/* CTA Button */}
           <button
             onClick={scrollToAbout}
-            className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg min-h-[44px]"
+            className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg min-h-[44px] scroll-animate btn-gradient"
           >
             <span className="hidden md:inline">Learn More About Me</span>
             <span className="md:hidden">Learn More</span>

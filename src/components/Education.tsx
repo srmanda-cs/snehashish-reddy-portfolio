@@ -24,11 +24,21 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-gray-800">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+    <section
+      id="education"
+      className="py-20 bg-gray-800 relative overflow-hidden"
+    >
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-glow"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16 scroll-animate">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Education
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              Education
+            </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             My academic journey in Computer Science and commitment to continuous
@@ -40,11 +50,13 @@ const Education = () => {
           {education.map((edu, index) => (
             <div
               key={index}
-              className="bg-gray-900 rounded-lg p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300"
+              className={`bg-gray-900 rounded-lg p-8 border border-gray-700 card-hover-lift glow-on-hover transition-all duration-300 ${
+                index === 0 ? "scroll-animate-left" : "scroll-animate-right"
+              }`}
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                 <div className="flex items-center gap-4 mb-4 md:mb-0">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-xl hover:scale-110 hover:rotate-6 transition-all duration-300">
                     {edu.logo}
                   </div>
                   <div>
@@ -73,7 +85,7 @@ const Education = () => {
                   {edu.coursework.map((course, courseIndex) => (
                     <span
                       key={courseIndex}
-                      className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm border border-gray-600"
+                      className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm border border-gray-600 hover:bg-primary/10 hover:border-primary/50 hover:scale-105 transition-all duration-200 cursor-default"
                     >
                       {course}
                     </span>

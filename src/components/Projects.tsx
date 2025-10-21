@@ -128,9 +128,21 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-24 px-4 bg-gray-800">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+    <section
+      id="projects"
+      className="py-24 px-4 bg-gray-800 relative overflow-hidden"
+    >
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-glow"></div>
+        <div
+          className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-glow"
+          style={{ animationDelay: "2s" }}
+        ></div>
+      </div>
+
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="text-center mb-16 scroll-animate">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
             Featured{" "}
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -165,13 +177,13 @@ const Projects = () => {
                   className="pl-2 md:pl-4 basis-full md:basis-1/2"
                 >
                   <div className="h-full min-h-[500px] md:min-h-[600px]">
-                    <Card className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg active:shadow-xl transition-all group overflow-hidden h-full flex flex-col">
+                    <Card className="card-gradient border-primary/20 shadow-elevated card-hover-lift glow-on-hover group overflow-hidden h-full flex flex-col">
                       <CardHeader className="pb-4">
                         <div className="flex items-start gap-4">
                           <div
                             className={`p-3 rounded-xl ${getGradientClasses(
                               project.gradient
-                            )} text-white shadow-lg group-hover:scale-110 transition-transform`}
+                            )} text-white shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}
                           >
                             {project.icon}
                           </div>
@@ -201,11 +213,11 @@ const Projects = () => {
                           {project.achievements.map((achievement, achIndex) => (
                             <div
                               key={achIndex}
-                              className="flex gap-3 p-3 bg-background/50 rounded-lg border border-primary/10"
+                              className="flex gap-3 p-3 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/30 hover:bg-background/70 transition-all duration-300 group/achievement"
                             >
                               <div className="flex-shrink-0 mt-0.5">
-                                <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center">
-                                  <Zap className="w-3 h-3 text-primary" />
+                                <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center group-hover/achievement:bg-primary/30 group-hover/achievement:scale-110 transition-all duration-300">
+                                  <Zap className="w-3 h-3 text-primary group-hover/achievement:rotate-12 transition-transform duration-300" />
                                 </div>
                               </div>
                               <div>
@@ -230,7 +242,7 @@ const Projects = () => {
                               <Badge
                                 key={techIndex}
                                 variant="outline"
-                                className="text-xs"
+                                className="text-xs hover:bg-primary/10 hover:border-primary/50 hover:scale-105 transition-all duration-200 cursor-default"
                               >
                                 {tech}
                               </Badge>
@@ -279,8 +291,8 @@ const Projects = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <Card className="card-gradient border-primary/20 shadow-elevated max-w-2xl mx-auto">
+        <div className="text-center mt-16 scroll-animate">
+          <Card className="card-gradient border-primary/20 shadow-elevated card-hover-lift glow-on-hover max-w-2xl mx-auto">
             <CardContent className="p-6 md:p-8">
               <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">
                 Interested in{" "}

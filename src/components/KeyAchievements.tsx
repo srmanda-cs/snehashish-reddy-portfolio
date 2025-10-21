@@ -86,13 +86,26 @@ const KeyAchievements = () => {
   };
 
   return (
-    <section id="achievements" className="py-24 px-4 bg-gray-900">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+    <section
+      id="achievements"
+      className="py-24 px-4 bg-gray-900 relative overflow-hidden"
+    >
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse-glow"></div>
+        <div
+          className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse-glow"
+          style={{ animationDelay: "2s" }}
+        ></div>
+      </div>
+
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="text-center mb-16 scroll-animate">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
             Key{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent relative inline-block">
               Achievements
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -101,7 +114,7 @@ const KeyAchievements = () => {
           </p>
         </div>
 
-        <div className="relative px-0 md:px-16">
+        <div className="relative px-0 md:px-16 scroll-animate">
           <Carousel
             opts={{
               align: "start",
@@ -121,13 +134,13 @@ const KeyAchievements = () => {
                   key={index}
                   className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3"
                 >
-                  <Card className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg active:shadow-xl transition-all group overflow-hidden h-full">
+                  <Card className="card-gradient border-primary/20 shadow-elevated hover:shadow-lg active:shadow-xl transition-all group overflow-hidden h-full card-hover-lift glow-on-hover">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4 mb-4">
                         <div
                           className={`p-3 rounded-xl ${getGradientClasses(
                             achievement.gradient
-                          )} text-white shadow-lg group-hover:scale-110 transition-transform`}
+                          )} text-white shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}
                         >
                           {achievement.icon}
                         </div>
@@ -160,7 +173,7 @@ const KeyAchievements = () => {
                             <Badge
                               key={metricIndex}
                               variant="outline"
-                              className="text-xs"
+                              className="text-xs hover:bg-primary/10 hover:border-primary/50 transition-all duration-300"
                             >
                               {metric}
                             </Badge>
@@ -189,37 +202,39 @@ const KeyAchievements = () => {
         </div>
 
         {/* Summary Stats */}
-        <div className="mt-16">
-          <Card className="card-gradient border-primary/20 shadow-elevated">
+        <div className="mt-16 scroll-animate">
+          <Card className="card-gradient border-primary/20 shadow-elevated card-hover-lift glow-on-hover">
             <CardContent className="p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">
+                <div className="group cursor-default">
+                  <div className="text-3xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
                     $1M
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     Budget Approved
                   </div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-accent mb-2">60%</div>
-                  <div className="text-sm text-muted-foreground">
+                <div className="group cursor-default">
+                  <div className="text-3xl font-bold text-accent mb-2 group-hover:scale-110 transition-transform duration-300">
+                    60%
+                  </div>
+                  <div className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     Workload Reduction
                   </div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary mb-2">
+                <div className="group cursor-default">
+                  <div className="text-3xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
                     99.9%
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     Time Saved
                   </div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-accent mb-2">
+                <div className="group cursor-default">
+                  <div className="text-3xl font-bold text-accent mb-2 group-hover:scale-110 transition-transform duration-300">
                     200+
                   </div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     Reports Processed
                   </div>
                 </div>

@@ -26,7 +26,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-20 bg-gray-800 relative overflow-hidden"
+      className="py-16 bg-gray-800 relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

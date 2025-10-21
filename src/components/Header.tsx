@@ -5,10 +5,19 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      // Calculate scroll progress
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.scrollY;
+      const scrollPercentage =
+        (scrollTop / (documentHeight - windowHeight)) * 100;
+      setScrollProgress(Math.min(scrollPercentage, 100));
 
       // Determine active section
       const sections = [
@@ -50,6 +59,13 @@ const Header = () => {
           : "bg-gray-900/95 backdrop-blur-sm border-b border-gray-800"
       }`}
     >
+      {/* Scroll Progress Bar */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gray-800/50">
+        <div
+          className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all duration-150 ease-out"
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
       <div className="container mx-auto px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           <button

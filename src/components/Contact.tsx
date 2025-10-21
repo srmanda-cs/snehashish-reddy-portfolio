@@ -51,7 +51,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-24 px-4 bg-gray-800 relative overflow-hidden"
+      className="py-16 px-4 bg-gray-800 relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -207,7 +207,7 @@ const Contact = () => {
                 <div className="pt-4">
                   <Button
                     variant="gradient"
-                    className="w-full btn-gradient group min-h-[44px]"
+                    className="w-full btn-gradient group min-h-[44px] ripple-effect"
                     asChild
                   >
                     <a

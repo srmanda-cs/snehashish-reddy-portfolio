@@ -130,7 +130,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-24 px-4 bg-gray-800 relative overflow-hidden"
+      className="py-16 px-4 bg-gray-800 relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -288,28 +288,6 @@ const Projects = () => {
               />
             ))}
           </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16 scroll-animate">
-          <Card className="card-gradient border-primary/20 shadow-elevated card-hover-lift glow-on-hover max-w-2xl mx-auto">
-            <CardContent className="p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-bold mb-4 text-center">
-                Interested in{" "}
-                <span className="text-gradient">Collaboration?</span>
-              </h3>
-              <p className="text-muted-foreground mb-6 text-center">
-                I'm always excited to work on challenging problems and
-                innovative solutions. Let's discuss how we can build something
-                amazing together.
-              </p>
-              <div className="flex justify-center">
-                <Button variant="gradient" size="lg" asChild>
-                  <a href="mailto:srmanda.cs@gmail.com">Get In Touch</a>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

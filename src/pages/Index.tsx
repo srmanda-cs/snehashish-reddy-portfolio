@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Experience from "@/components/Experience";
-import KeyAchievements from "@/components/KeyAchievements";
+import ImpactMetrics from "@/components/ImpactMetrics";
+import CareerTimeline from "@/components/CareerTimeline";
 import Projects from "@/components/Projects";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
@@ -37,8 +37,8 @@ const Index = () => {
     <div className="min-h-screen bg-gray-900">
       <Hero />
       <About />
-      <Experience />
-      <KeyAchievements />
+      <ImpactMetrics />
+      <CareerTimeline />
       <Projects />
       <Education />
       <Contact />

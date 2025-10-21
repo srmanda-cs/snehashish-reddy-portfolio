@@ -63,11 +63,27 @@ const Hero = () => {
             Full-Stack Software Engineer
           </p>
 
-          <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed scroll-animate">
-            Experienced in building production-grade systems on AWS and applying
-            advanced optimization models to solve complex problems. Contributed
-            to $1M+ systems using React, Python, and cloud technologies.
-          </p>
+          <div className="mb-12 scroll-animate">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed mb-6">
+              Experienced in building production-grade systems on AWS and
+              applying advanced optimization models to solve complex problems.
+              Contributed to $1M+ systems using React, Python, and cloud
+              technologies.
+            </p>
+
+            {/* Unique Value Proposition Tags */}
+            <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+              <div className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-medium backdrop-blur-sm hover:scale-105 transition-all duration-300">
+                ⚡ 99.9% Time Reduction
+              </div>
+              <div className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-medium backdrop-blur-sm hover:scale-105 transition-all duration-300">
+                💰 $1M+ Budget Approvals
+              </div>
+              <div className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium backdrop-blur-sm hover:scale-105 transition-all duration-300">
+                🎯 60% Workload Reduction
+              </div>
+            </div>
+          </div>
 
           {/* Contact Info */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-12 text-gray-300 scroll-animate">
@@ -88,7 +104,7 @@ const Hero = () => {
           {/* CTA Button */}
           <button
             onClick={scrollToAbout}
-            className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg min-h-[44px] scroll-animate btn-gradient"
+            className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-lg min-h-[44px] scroll-animate btn-gradient ripple-effect"
           >
             <span className="hidden md:inline">Learn More About Me</span>
             <span className="md:hidden">Learn More</span>

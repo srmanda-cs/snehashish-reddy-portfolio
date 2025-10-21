@@ -119,7 +119,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="py-24 px-4 bg-gray-900 relative overflow-hidden"
+      className="py-16 px-4 bg-gray-900 relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

@@ -1,33 +1,55 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Cloud, Database, Zap } from "lucide-react";
+import {
+  Code,
+  Cloud,
+  Database,
+  Zap,
+  Layers,
+  Wrench,
+  Brain,
+  Settings,
+} from "lucide-react";
 
 const About = () => {
   const skillCategories = [
     {
       icon: <Code className="w-6 h-6" />,
-      title: "Languages",
+      title: "Programming Languages",
       skills: [
         "Python",
         "JavaScript",
         "TypeScript",
         "Java",
         "SQL",
+        "KQL",
         "C++",
         "C#",
       ],
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Frameworks & Tools",
+      icon: <Layers className="w-6 h-6" />,
+      title: "Frontend Technologies",
       skills: [
         "React",
         "Next.js",
-        "FastAPI",
+        "Fluent UI",
+        "HTML/CSS",
+        "Flutter",
+        "Jinja2",
+      ],
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Backend & APIs",
+      skills: [
+        "Node.js",
         "Flask",
+        "FastAPI",
         "Spring Boot",
-        "Pandas",
-        "NumPy",
+        "REST API",
+        "GraphQL",
+        "Microservices",
       ],
     },
     {
@@ -37,22 +59,59 @@ const About = () => {
         "AWS Lambda",
         "AWS S3",
         "Azure AD",
-        "Docker",
         "Kubernetes",
+        "Docker",
+        "Serverless",
         "CI/CD",
-        "Git",
       ],
     },
     {
       icon: <Database className="w-6 h-6" />,
-      title: "Data & Databases",
+      title: "Databases & Storage",
       skills: [
         "MySQL",
         "PostgreSQL",
-        "MongoDB",
-        "OpenSearch",
         "Redis",
+        "OpenSearch",
+        "MongoDB",
         "Database Design",
+      ],
+    },
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "Data & ML",
+      skills: [
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "PyTorch",
+        "NLP",
+        "ETL",
+        "Data Pipelines",
+        "UMAP",
+      ],
+    },
+    {
+      icon: <Wrench className="w-6 h-6" />,
+      title: "Tools & Platforms",
+      skills: [
+        "Git",
+        "Jira",
+        "Trello",
+        "LaTeX",
+        "Linux",
+        "Agile",
+        "Microsoft Teams",
+      ],
+    },
+    {
+      icon: <Settings className="w-6 h-6" />,
+      title: "Specialized Skills",
+      skills: [
+        "Algorithm Design",
+        "System Architecture",
+        "Performance Optimization",
+        "Security",
       ],
     },
   ];
@@ -60,7 +119,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-24 px-4 bg-gray-800 relative overflow-hidden"
+      className="py-16 px-4 bg-gray-800 relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -145,10 +204,10 @@ const About = () => {
         {/* Skills Grid */}
         <div className="space-y-8">
           <h3 className="text-3xl font-bold text-center scroll-animate">
-            Areas of <span className="text-gradient">Expertise</span>
+            <span className="text-gradient">Skills</span>
           </h3>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {skillCategories.map((category, index) => (
               <Card
                 key={index}
@@ -178,31 +237,6 @@ const About = () => {
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Core Concepts */}
-        <div className="mt-12 text-center scroll-animate">
-          <h4 className="text-xl font-semibold mb-4 text-muted-foreground">
-            Core Concepts
-          </h4>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              "System Architecture",
-              "Event-Driven Design",
-              "NLP & ML",
-              "Algorithm Design",
-              "Performance Optimization",
-              "Automation",
-            ].map((concept, index) => (
-              <Badge
-                key={index}
-                variant="outline"
-                className="text-sm px-4 py-2 hover:bg-primary/10 hover:border-primary/50 hover:scale-105 transition-all duration-200 cursor-default"
-              >
-                {concept}
-              </Badge>
             ))}
           </div>
         </div>

@@ -53,14 +53,14 @@ const Experience = () => {
       logo: "T",
       achievements: [
         {
-          impact: "₹7 crore (~$1M) budget approval",
+          impact: "$1M budget approval",
           description:
-            "Led 3-person intern team to deliver PMS proof-of-concept in 3 months, convincing skeptical management to approve ₹7 crore budget for production system. Architected Microsoft Teams app using ReactJS and Fluent UI, replacing 24-year legacy system with transparent goal hierarchy and feedback mechanisms.",
+            "Led 3-person intern team to deliver PMS proof-of-concept in 3 months, convincing skeptical management to approve $1M (₹7 crore) budget for production system. Architected Microsoft Teams app using ReactJS and Fluent UI, replacing 24-year legacy system with transparent goal hierarchy and feedback mechanisms.",
         },
         {
-          impact: "₹27 lakh (~$40K) annual savings",
+          impact: "$40K annual savings",
           description:
-            "Built Next.js Asset Portal integrating Azure AD Graph with on-premise MySQL, preventing ₹15 lakh in asset loss and reducing ₹12 lakh overhead by making 2 roles redundant (1 HR, 1 IT admin). Designed algorithms alerting HR/IT on inactive devices and automatic device disabling when employees on leave.",
+            "Built Next.js Asset Portal integrating Azure AD Graph with on-premise MySQL, preventing $20K (₹15 lakh) in asset loss and reducing $20K (₹12 lakh) overhead by making 2 roles redundant (1 HR, 1 IT admin). Designed algorithms alerting HR/IT on inactive devices and automatic device disabling when employees on leave.",
         },
         {
           impact: "Led intern team under pressure",

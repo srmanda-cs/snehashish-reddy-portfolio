@@ -53,28 +53,31 @@ const Experience = () => {
       logo: "T",
       achievements: [
         {
-          impact: "$1M+ investment enablement",
+          impact: "₹7 crore (~$1M) budget approval",
           description:
-            "Aided in enabling a $1M+ investment for an enterprise-wide Performance Management System by developing and delivering a key proof-of-concept in ReactJS, and Fluent UI.",
+            "Led 3-person intern team to deliver PMS proof-of-concept in 3 months, convincing skeptical management to approve ₹7 crore budget for production system. Architected Microsoft Teams app using ReactJS and Fluent UI, replacing 24-year legacy system with transparent goal hierarchy and feedback mechanisms.",
         },
         {
-          impact: "37% cost reduction",
+          impact: "₹27 lakh (~$40K) annual savings",
           description:
-            "Minimized asset-tracking costs by 37% by building a full-stack Next.js portal that integrated with Azure AD, Graph API, and internal inventory systems for 10,000+ employees.",
+            "Built Next.js Asset Portal integrating Azure AD Graph with on-premise MySQL, preventing ₹15 lakh in asset loss and reducing ₹12 lakh overhead by making 2 roles redundant (1 HR, 1 IT admin). Designed algorithms alerting HR/IT on inactive devices and automatic device disabling when employees on leave.",
         },
         {
-          impact: "25% efficiency improvement",
+          impact: "Led intern team under pressure",
           description:
-            "Shrank manual deployment effort by 25% by enhancing the team's CI/CD pipeline with automated build triggers and deployment scripts, improving release stability for critical internal services.",
+            "Manager delegated intern coordination due to strong communication and technical knowledge. Mapped code/architectural needs, split work, drove development while managing 2 interns, facing 3-month deadline and management opposition - all before finishing college.",
         },
       ],
       technologies: [
         "ReactJS",
         "Next.js",
         "Fluent UI",
+        "Node.js",
+        "Flask",
+        "MySQL",
         "Azure AD",
         "Graph API",
-        "CI/CD",
+        "Microsoft Teams",
       ],
     },
     {
@@ -85,28 +88,30 @@ const Experience = () => {
       logo: "V",
       achievements: [
         {
-          impact: "99%+ processing time reduction",
+          impact: "3-6+ months to <1 day processing",
           description:
-            "Contributed towards decreasing credit report processing time by 99%+ (from 3 months to 4 minutes) by building an automated document-processing pipeline using AWS Lambda, ECS, and Spring Boot microservices.",
+            "Reduced loan analysis from 3-6+ months to <1 day by architecting event-driven system: S3→Queue→Spring Boot→4 parallel Python Lambdas→OpenSearch. Previously required 35 associates for 15 days to process 1000-page report at 2 pages/day. Processed ~200 reports with zero manual edits needed.",
         },
         {
-          impact: "80% lookup time reduction",
+          impact: "Section-specific parsing innovation",
           description:
-            "Cut analyst data lookup time by 80% by engineering an indexing solution in Amazon OpenSearch, featuring faceted search and on-demand CSV export capabilities for multi-gigabyte datasets.",
+            "Convinced skeptical management after 100 failed attempts by others. Architected custom parsing for 3 most important sections using PDFPlumber - each section got targeted logic instead of uniform processing. Built verification portal serving dual purpose: accuracy validation AND ML training data collection.",
         },
         {
-          impact: "Data corruption elimination",
+          impact: "Transformed decision-making speed",
           description:
-            "Verified data against a rule set of 40+ business logic checks programmatically, by architecting a validation pipeline, eliminating previously common data corruption errors.",
+            "Automated extraction enabled searchable OpenSearch repository, eliminating 12-hour manual slide analysis. Massive resource investment just to consider lending transformed to deciding in <1 day. Created foundation for richest training data when multi-modal AI arrived.",
         },
       ],
       technologies: [
+        "AWS S3",
         "AWS Lambda",
-        "ECS",
         "Spring Boot",
-        "Amazon OpenSearch",
+        "PDFPlumber",
+        "OpenSearch",
         "Python",
-        "Microservices",
+        "EC2",
+        "Event-Driven Architecture",
       ],
     },
   ];

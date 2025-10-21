@@ -1,11 +1,11 @@
-import { ArrowDown } from 'lucide-react';
-import profileImage from '@/assets/profile-avatar.jpg';
+import { ArrowDown } from "lucide-react";
+import profileImage from "@/assets/profile-avatar.jpg";
 
 const Hero = () => {
   const scrollToAbout = () => {
-    const element = document.getElementById('about');
+    const element = document.getElementById("about");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -61,8 +61,9 @@ const Hero = () => {
           </p>
 
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Experienced in building production-grade systems on AWS and applying advanced optimization 
-            models to solve complex problems. Contributed to $1M+ systems using React, Python, and cloud technologies.
+            Experienced in building production-grade systems on AWS and applying
+            advanced optimization models to solve complex problems. Contributed
+            to $1M+ systems using React, Python, and cloud technologies.
           </p>
 
           {/* Contact Info */}
@@ -71,10 +72,10 @@ const Hero = () => {
               <span>📧 srmanda.cs@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
-              <span>📱 +1 (919) 672-2226</span>
+              <span>📱 (919) 672-2226</span>
             </div>
             <div className="flex items-center gap-2">
-              <span>📍 United States</span>
+              <span>📍 Chapel Hill, NC</span>
             </div>
           </div>
 

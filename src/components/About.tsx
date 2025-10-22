@@ -139,11 +139,11 @@ const About = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Full-stack software engineer with expertise in building scalable
-            systems, automation platforms, and solving complex optimization
-            problems. Currently pursuing MS in Computer Science at UNC Chapel
-            Hill (4.0 GPA) while developing production systems that drive
-            measurable business impact.
+            Full-stack Software Development Engineer with expertise in building
+            scalable systems, automation platforms, and solving complex
+            optimization problems. Currently pursuing MS in Computer Science at
+            UNC Chapel Hill (4.0 GPA) while developing production systems that
+            drive measurable business impact.
           </p>
         </div>
 
@@ -156,10 +156,10 @@ const About = () => {
               </h3>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Software engineer experienced in building production-grade
-                  automation platforms, event-driven architectures, and
-                  intelligent systems. Track record of delivering measurable
-                  impact:{" "}
+                  Software Development Engineer experienced in building
+                  production-grade automation platforms, event-driven
+                  architectures, and intelligent systems. Track record of
+                  delivering measurable impact:{" "}
                   <span className="text-primary font-semibold">
                     60% workload reduction
                   </span>

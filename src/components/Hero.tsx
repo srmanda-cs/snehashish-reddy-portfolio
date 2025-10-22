@@ -60,7 +60,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-4 font-light scroll-animate">
-            Full-Stack Software Engineer
+            Full-Stack Software Development Engineer
           </p>
 
           <div className="mb-12 scroll-animate">

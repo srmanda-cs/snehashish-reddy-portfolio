@@ -192,7 +192,7 @@ const ImpactMetrics = () => {
       icon: <Award className="w-8 h-8" />,
       value: `$${counts.award}K`,
       label: "Award Received",
-      description: "Recognition for teaching excellence",
+      description: "Recognition for technical excellence",
       color: "from-amber-400 to-yellow-600",
     },
     {

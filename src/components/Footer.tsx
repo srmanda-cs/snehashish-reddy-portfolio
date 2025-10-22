@@ -72,9 +72,9 @@ const Footer = () => {
               Snehashish Reddy Manda
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Software Engineer specializing in full-stack development, cloud
-              architecture, and building scalable systems that drive measurable
-              business impact.
+              Software Development Engineer specializing in full-stack
+              development, cloud architecture, and building scalable systems
+              that drive measurable business impact.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social, index) => (

@@ -153,19 +153,19 @@ const CareerTimeline = () => {
         </div>
 
         <div className="relative">
-          {/* Timeline Line - Hidden on mobile, visible on desktop */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary/50 via-accent/50 to-primary/50"></div>
+          {/* Timeline Line - Left-aligned on mobile, centered on desktop */}
+          <div className="block absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary/50 via-accent/50 to-primary/50"></div>
 
           <div className="space-y-8 md:space-y-12">
             {timeline.map((item, index) => (
               <div
                 key={index}
-                className={`relative scroll-animate ${
+                className={`relative scroll-animate pl-16 md:pl-0 ${
                   index % 2 === 0 ? "md:pr-1/2" : "md:pl-1/2"
                 }`}
               >
-                {/* Timeline Dot - Hidden on mobile */}
-                <div className="hidden md:block absolute left-1/2 top-8 transform -translate-x-1/2 -translate-y-1/2">
+                {/* Timeline Dot - Left-aligned on mobile, centered on desktop */}
+                <div className="block absolute left-8 md:left-1/2 top-8 transform md:-translate-x-1/2 -translate-y-1/2">
                   <div
                     className={`w-4 h-4 rounded-full bg-gradient-to-br ${
                       item.color
@@ -177,7 +177,7 @@ const CareerTimeline = () => {
 
                 {/* Content Card */}
                 <div
-                  className={`${
+                  className={`w-full ${
                     index % 2 === 0 ? "md:mr-8" : "md:ml-8"
                   } relative`}
                 >

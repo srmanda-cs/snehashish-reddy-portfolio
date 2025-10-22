@@ -280,7 +280,7 @@ const ImpactMetrics = () => {
         </div>
 
         {/* Mobile/Tablet: Carousel Layout */}
-        <div className="lg:hidden relative px-0 md:px-12">
+        <div className="lg:hidden relative px-8 md:px-12">
           <Carousel
             opts={{
               align: "start",
@@ -300,44 +300,46 @@ const ImpactMetrics = () => {
                   key={index}
                   className="pl-2 md:pl-4 basis-full md:basis-1/2"
                 >
-                  <div
-                    className={`relative group ${
-                      isVisible ? "animate-scale-in" : "opacity-0"
-                    }`}
-                    style={{ animationDelay: `${index * 150}ms` }}
-                  >
-                    {/* Card */}
-                    <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 h-full hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
-                      {/* Icon with gradient background */}
-                      <div
-                        className={`w-16 h-16 rounded-xl bg-gradient-to-br ${metric.color} flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}
-                      >
-                        <div className="text-white">{metric.icon}</div>
-                      </div>
-
-                      {/* Metric Value */}
-                      <div className="mb-2">
+                  <div className="h-full min-h-[280px] md:min-h-[320px]">
+                    <div
+                      className={`relative group h-full ${
+                        isVisible ? "animate-scale-in" : "opacity-0"
+                      }`}
+                      style={{ animationDelay: `${index * 150}ms` }}
+                    >
+                      {/* Card */}
+                      <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-4 md:p-6 h-full hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
+                        {/* Icon with gradient background */}
                         <div
-                          className={`text-4xl md:text-5xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent`}
+                          className={`w-12 h-12 md:w-16 md:h-16 rounded-xl bg-gradient-to-br ${metric.color} flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}
                         >
-                          {metric.value}
+                          <div className="text-white">{metric.icon}</div>
                         </div>
-                      </div>
 
-                      {/* Label */}
-                      <div className="text-lg font-semibold text-white mb-2">
-                        {metric.label}
-                      </div>
+                        {/* Metric Value */}
+                        <div className="mb-1 md:mb-2">
+                          <div
+                            className={`text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r ${metric.color} bg-clip-text text-transparent`}
+                          >
+                            {metric.value}
+                          </div>
+                        </div>
 
-                      {/* Description */}
-                      <div className="text-sm text-gray-400 leading-relaxed">
-                        {metric.description}
-                      </div>
+                        {/* Label */}
+                        <div className="text-base md:text-lg font-semibold text-white mb-1 md:mb-2">
+                          {metric.label}
+                        </div>
 
-                      {/* Hover glow effect */}
-                      <div
-                        className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${metric.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none`}
-                      ></div>
+                        {/* Description */}
+                        <div className="text-xs md:text-sm text-gray-400 leading-relaxed">
+                          {metric.description}
+                        </div>
+
+                        {/* Hover glow effect */}
+                        <div
+                          className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${metric.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none`}
+                        ></div>
+                      </div>
                     </div>
                   </div>
                 </CarouselItem>

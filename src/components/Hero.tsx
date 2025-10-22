@@ -35,7 +35,7 @@ const Hero = () => {
       {/* Enhanced overlay for better text readability - Desktop only uses backdrop-blur */}
       <div className="absolute inset-0 bg-black/60 md:backdrop-blur-sm"></div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-6 pt-12 pb-20 md:pt-0 md:pb-0 text-center relative z-10">
         <div className="animate-fade-in">
           {/* Profile Image */}
           <div className="mb-8 flex justify-center scroll-animate">

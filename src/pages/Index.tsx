@@ -4,7 +4,6 @@ import About from "@/components/About";
 import ImpactMetrics from "@/components/ImpactMetrics";
 import CareerTimeline from "@/components/CareerTimeline";
 import Projects from "@/components/Projects";
-import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -40,7 +39,6 @@ const Index = () => {
       <ImpactMetrics />
       <CareerTimeline />
       <Projects />
-      <Education />
       <Contact />
       <Footer />
     </div>

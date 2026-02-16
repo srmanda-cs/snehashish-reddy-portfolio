@@ -1,0 +1,13 @@
+{
+  "$schema": "https://pages.cloudflare.com/schemas/cloudflare-pages.json",
+  "build": {
+    "command": "npm run build",
+    "output_dir": "dist",
+    "environment": {
+      "NODE_VERSION": "20"
+    }
+  },
+  "functions": {
+    "nodejs_compat": true
+  }
+}

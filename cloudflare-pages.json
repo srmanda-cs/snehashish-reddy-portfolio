@@ -1,7 +1,7 @@
 {
   "$schema": "https://pages.cloudflare.com/schemas/cloudflare-pages.json",
   "build": {
-    "command": "npm run build",
+    "command": "npm ci && npm run build",
     "output_dir": "dist",
     "environment": {
       "NODE_VERSION": "20"

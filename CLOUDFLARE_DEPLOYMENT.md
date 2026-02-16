@@ -9,7 +9,7 @@ This guide explains how to deploy your React portfolio to Cloudflare Pages and t
    - Go to [Cloudflare Pages](https://pages.cloudflare.com/)
    - Connect your GitHub repository
    - Use the following settings:
-     - **Build command**: `npm run build`
+     - **Build command**: `npm ci && npm run build`
      - **Build output directory**: `dist`
      - **Node.js version**: `20`
 
@@ -47,8 +47,9 @@ Optimized for production builds:
 **Problem**: Mixed package manager setup (Bun + npm)
 **Solution**: 
 - ✅ Removed `.bun-version` file
+- ✅ **Removed `bun.lockb` file** (forced npm-only usage)
+- ✅ Updated build command to use `npm ci` for clean builds
 - ✅ Ensured consistent npm usage
-- ✅ Added `prebuild` script to ensure clean dependencies
 
 #### 2. Build Failures
 **Problem**: Missing dependencies or incompatible versions
@@ -77,7 +78,7 @@ This script checks:
 
 ## Build Process
 
-1. **Pre-build**: `npm ci` ensures clean dependency installation
+1. **Clean install**: `npm ci` ensures clean dependency installation
 2. **Build**: `vite build` creates optimized production build
 3. **Output**: Files are generated in `dist/` directory
 
@@ -104,9 +105,10 @@ If you encounter issues:
 
 ## Files Modified for Cloudflare Pages
 
+- ✅ **Removed `bun.lockb`** (forced npm-only usage)
 - ✅ Removed `.bun-version` (conflicts with npm)
 - ✅ Updated `vite.config.ts` (removed dev plugins, added build config)
-- ✅ Added `cloudflare-pages.json` (deployment configuration)
+- ✅ Updated `cloudflare-pages.json` (simplified build command)
 - ✅ Updated `package.json` (added prebuild script)
 - ✅ Created `scripts/deploy-check.cjs` (validation script)
 - ✅ Created `build.config.js` (build optimization settings)
